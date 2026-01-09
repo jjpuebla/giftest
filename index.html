@@ -1,82 +1,31 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CogAT Sample - Figure Classification</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>CogAT Practice Tests</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <div class="page">
     <header class="hero">
-      <div class="hero-left">
       <div class="eyebrow">CogAT Grade 2 Practice</div>
-      <h1>Interactive Test</h1>
-      <p>Work through each category and review results at the end of each section.</p>
-      </div>
-      <div id="timers" class="hero-right">
-        <div class="stat-card">
-          <div class="stat-label">Overall time</div>
-          <div id="overall-time" class="stat-value">00:00</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-label">Category time</div>
-          <div id="category-time" class="stat-value">00:00</div>
-        </div>
-      </div>
+      <h1>Choose a Test</h1>
+      <p>Select a practice test to begin. Your progress is tracked per category.</p>
     </header>
 
-    <main class="layout">
-      <aside class="panel nav-panel">
-        <h2 class="side-title">Questions</h2>
-        <div id="question-nav" class="question-nav"></div>
-      </aside>
-
-      <section class="panel question-panel">
-        <div class="panel-header">
-          <div>
-            <div id="category-name" class="category-badge"></div>
-            <div id="progress" class="panel-title"></div>
-          </div>
-          <div class="progress-wrap">
-            <div class="progress-bar">
-              <div id="progress-bar" class="progress-bar-fill"></div>
-            </div>
-            <div id="answered-count" class="muted"></div>
-          </div>
-        </div>
-
-        <div id="app"></div>
-
-        <div class="nav">
-          <button id="prev" class="btn ghost">Previous</button>
-          <button id="next" class="btn ghost">Next</button>
-          <button id="check" class="btn primary">Check answer</button>
-        </div>
-      </section>
-
-      <aside id="results-panel" class="panel side-panel">
-        <h2 class="side-title">Results</h2>
-        <div class="score-card">
-          <div id="score" class="score"></div>
-          <div id="grade" class="grade"></div>
-        </div>
-        <div id="category-stats" class="category-stats"></div>
-      </aside>
+    <main class="cards">
+      <a class="card" href="test1/index.html">
+        <div class="card-title">Practice Test 1</div>
+        <div class="card-meta">Original PDF-based test</div>
+        <div class="card-action">Open test</div>
+      </a>
+      <a class="card" href="test2/index.html">
+        <div class="card-title">Practice Test 2</div>
+        <div class="card-meta">PDF-based test with new questions</div>
+        <div class="card-action">Open test</div>
+      </a>
     </main>
-
-    <div id="confirm-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
-      <div class="modal-card">
-        <div id="confirm-title" class="modal-title">Unanswered questions</div>
-        <div id="confirm-message" class="modal-message"></div>
-        <div class="modal-actions">
-          <button id="confirm-cancel" class="btn ghost" type="button">Back to test</button>
-          <button id="confirm-end" class="btn primary" type="button">End category</button>
-        </div>
-      </div>
-    </div>
   </div>
-
-  <script src="app.js"></script>
 </body>
 </html>

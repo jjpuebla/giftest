@@ -1,0 +1,90 @@
+﻿:root {
+  --bg: #e6f2ff;
+  --ink: #1f2328;
+  --muted: #5c6872;
+  --accent: #2f6db5;
+  --card: #ffffff;
+  --font-head: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  --font-body: "Trebuchet MS", "Verdana", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 18px 40px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+h1 {
+  margin: 10px 0 8px;
+  font-size: 36px;
+  font-family: var(--font-head);
+}
+
+p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px;
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(31, 35, 40, 0.08);
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card-meta {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.card-action {
+  margin-top: auto;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 28px;
+  }
+}
