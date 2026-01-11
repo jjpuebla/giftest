@@ -1467,7 +1467,7 @@ function updateNav() {
   nextBtn.textContent = isLastInCategory(state.currentIndex)
     ? "Finish category"
     : "Next";
-  checkBtn.disabled = false;
+  checkBtn.disabled = true;
 }
 
 function updateSummary() {
@@ -1680,7 +1680,7 @@ questionNavEl.addEventListener("click", (event) => {
   }
 });
 
-checkBtn.addEventListener("click", checkAnswer);
+checkBtn.addEventListener("click", (event) => event.preventDefault());
 
 renderQuestion();
 updateTimers();
